@@ -28,7 +28,7 @@ body{
     background-clip: text;
     color: transparent;
 }
-ul{
+.link-nav{
     list-style: none;
     display: grid;
     justify-content: center;
@@ -36,10 +36,17 @@ ul{
     margin: 0px 15%;
     padding: 0px;
 }
-ul li a{
+.link-nav li a{
     text-decoration: none;
     color: white;
 
+}
+.challenge-img{
+    width: 25px;
+    height: 25px;
+}
+ul{
+    list-style: none;
 }
 #primary-btn{
     padding: 10px 15px;
@@ -49,6 +56,12 @@ ul li a{
     color: white;
     font-size: 16px;
     border-radius: 20px;
+    position: absolute;
+    left: 15%;
+
+}
+.menu-img{
+    visibility: hidden;
 }
 #hero{
     margin: 80px 0px;
@@ -57,9 +70,7 @@ ul li a{
     text-align: center;
     width: 100%;
     background-size: cover;
-    background-position: center;
-    
-    
+    background-position: center;   
 }
 .hero-container{
     display: grid;
@@ -80,11 +91,12 @@ ul li a{
 .mic-back{
     position: relative;
     top: 10px;
+    width: 100%;
 }
 .mic{
     position: relative;
     top: -250px;
-    right: px;
+    
 }
 .new{
     background-color: #00FF88;
@@ -207,8 +219,7 @@ h2{
     align-content: center;
 }
 .last-layout{
-    grid-column: span 1;
-    grid-row: span 1;
+    grid-column: span 1; 
     align-content: center;
 
 }
@@ -285,23 +296,16 @@ h2{
     margin-bottom: 50px;
 }
 .challenge-box{
-    display: grid;
-    grid-template-columns: repeat(2 , 1fr);
+    display: flex;
+    gap: 40px;
     background-color: #220e3d;
-    padding: 50px;
+    padding: 20px;
     border-radius: 20px;
     margin-bottom: 50px;
-
-}
+} 
 .challenge-img{
     width: fit-content;
-}
-.challenge-text{
-    padding: auto;
-    position: relative;
-    left: -310px;
-    width: 210%;
-}
+} 
 .challenge-text h2{
     font-size: 2rem;
 }
@@ -312,15 +316,18 @@ h2{
     padding: 0px;
     width: 70%;
 }
-.challenge-text ul{
+/* .challenge-text ul{
     display: grid;
     grid-template-columns: repeat(4 , 1fr);
-    margin-right: 70%;
-    position: relative;
-    right: 140px;
     margin-top: 15px;
-}
- 
+} */
+.ul-link{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    width: 150px;
+    margin-top: 20px;
+} 
 .challenge-text ul li  {
     margin-right: 10px;
     width: 40px;
@@ -329,13 +336,13 @@ h2{
     border: 1px solid rgb(140, 136, 136);
     text-align: center;
     align-content: center;
-    
-    
+    background-color: #F7E93F;
 }
 #footer{
+    width: 100%;
     background-color: #230749;
     background-image: url(../images/footer-bg.png);
-    background-position: center;
+    background-position: 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -345,7 +352,6 @@ h2{
     text-align: center;
     padding: 10px 0px;
 }
-
 .footer-logo{
     display: grid;
     grid-template-columns: repeat(4 , 1fr);
@@ -355,7 +361,6 @@ h2{
     margin-bottom: 90px;
     width: 35%
 }
-
 .footer-name{
     width: fit-content;
     margin: 100px auto 03px;
@@ -375,17 +380,14 @@ h2{
     display: grid;
     grid-template-columns: repeat(4 , 1fr);
     margin-top: 25px;
-    
 }
-.footer-logo p{
- 
+.footer-logo p{ 
     color: white;
     width: 10%;
     opacity: 60%;
     position: relative;
     top: -15px;
     width: fit-content;
-    
 }
 .copyright{
     color: white;
@@ -393,4 +395,143 @@ h2{
     margin: 0 auto;
     position: relative;
     bottom: 90px;
+}
+@media screen and (max-width: 576px){
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .nav-container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav-container ul , #primary-btn{
+        display: none;
+    }
+    .menu-img{
+        visibility: visible;
+    }
+    .hero-bg{
+    margin:50px 0px;
+    background-image: url(../images/hero-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;   
+    }
+    .mic-back img{
+        width: 200px;
+        height: 200px;
+        position: relative;
+        top: 40px;
+    }
+    .mic img{
+        position: relative;
+        bottom: -140px;
+        width: 47px;
+        width: 70px;
+    }
+    .new{
+        position: relative;
+        top: -250px;
+        left: 70px;
+    }
+    .about-number{
+        grid-template-columns: repeat(2 , 1fr);
+        row-gap: 40px;
+    }
+    #choose{
+        margin: 0px;
+    }
+    .choose-heading h2{
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        font-size: 35px;
+    }
+    .choose-grid{
+        margin-top: 20px;
+        grid-template-columns: repeat(1 , 1fr);
+        height: 1400px;
+        width: fit-content;
+    }
+    #main-grid{
+        width: fit-content;
+        margin: 0px;
+    }
+    #episodes{
+        padding: 0;
+        padding: 0%;
+        border: 1px solid red;
+    }
+    .episodes-container{
+        border: 2px solid green;
+        padding: 0px;
+    }
+    .episodes-heading{
+        border: 3px solid wheat;
+    }
+    .episodes-video{
+        grid-template-columns: repeat(1 , 1fr);
+        gap: 40px;
+    }
+    #challenge{
+        margin: 0px;
+    }
+    .challenge-box{
+        display: flex;
+        flex-direction: column;
+    }
+    .ul-link{
+        margin: 20px auto;
+    }
+    .challenge-img img{
+        width: 300px;
+        margin: 0 auto;
+        margin-left: 100px;
+    }
+    .challenge-text h2 , ul{
+        text-align: center;
+       margin-bottom: 20px;
+    }
+    .challenge-text ul{
+        width: 100%;
+    }
+    .challenge-text p{
+        text-align: center;
+        width: 500px;
+    }
+    .challenge-problem{
+    padding-top: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+    .challenge-text h2{
+        width: fit-content;
+        margin: 0px auto; 
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    #footer{
+        padding: 0px;
+        background-size:contain;
+        backface-visibility:visible ;
+    }
+    .footer-section{
+        padding: 0%;
+    }
+    .footer-logo{
+        grid-template-columns: repeat(2 , 1fr);
+        width: 40%;
+        padding-top: 30px;
+    }
+    .footer-logo p{
+        width: fit-content;
+        padding: 0px;
+        padding-bottom: 10px;
+    }
 }
